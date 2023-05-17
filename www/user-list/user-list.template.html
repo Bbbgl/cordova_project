@@ -1,0 +1,115 @@
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2"> -->
+      <!--Sidebar content-->
+<!-- 
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p> -->
+
+    <!-- </div> -->
+    <!-- <div class="col-md-10"> -->
+      <!--Body content-->
+<!-- <div>
+  <ul class="users">
+     <li ng-repeat="phone in $ctrl.users | filter:$ctrl.query | orderBy:$ctrl.orderProp"> -->
+<!-- 
+    <div ng-repeat="user in $ctrl.users">
+      <span>{{user.name}}</span> -->
+      
+      <!-- <span>{userinfo</span> -->
+      <!-- <p>{{user.snippet}}</p> -->
+      <!-- </div>
+  </ul>
+
+</div> -->
+<!--  </div>
+</div> -->
+
+<!-- <body ng-controller="GetUsersController" > -->
+  <div>
+<section id="flex-container" ng-repeat = "user in users | orderBy:$ctrl.orderProp">
+
+  
+<section id = "Card" class="flex-item" ng-click="writeConsole(user)" data-target="#myModal">
+  
+      
+  <!-- <button id="openModalBtn" ng-click="toggleModal()"></button>-->
+  <!-- <button id="provaBtn"  ng-click="openModal()" >PROVA NORMALE </button>  -->
+  <!-- ng-controller="secondCtrl" ng-click="openModal()" -->
+  <a id="userFirstName">{{user.first_name}}</a>
+  <a id="userLastName">{{user.last_name}}</a>
+  <!-- <h2> {{user.id}}</h2> -->
+  <!-- <p>{{user.avatar}}</p> -->
+  <img ng-src="{{user.avatar}}">
+
+  <!-- <div  class="btn-modal" ng-click="openModal()">
+    <div class="btn-text">
+        Open Modal
+    </div>
+  </div> -->
+</section>
+
+
+</section>
+
+<!-- <div><a href="#!/ordinautenti">ORDINA</a></div> -->
+<div><a ng-click="orderList()" ng-model="$ctrl.orderProp">ORDINA</a></div>
+<!-- <div ng-show="modalVisible" class="modal">
+
+    
+  <div class="modal-content">
+  <br>
+  <span class="close">&times;</span>
+  
+
+  <input type="text" id="changeFirstName" value="">
+  
+  <input type="text" id="changeLastName" value="">
+  <br>
+  <button id="btnUpdate" onclick="udpateText()">Conferma</button>
+  
+  <button id="btnClose" onclick="closeModal()">Annulla</button>
+
+  </div>
+</div>
+ -->
+
+ 
+
+<!-- Modal content -->
+<div id="myModal" class="modal" ng-class="{'hide': hideModal}">
+
+
+  <div>
+
+    <br>
+    
+    <p id="demo">.</p>
+
+    <input type="text"  name="changeFirstName" ng-model="first_name_modal">
+    
+    <input type="text"  name="changeLastName" ng-model="last_name_modal">
+    <button ng-click="confirm()">CONFERMA</button>
+    <button ng-click="annulla()">ANNULLA</button>
+    <br>
+    <!-- <button id="btnUpdate" onclick="udpateText()">Conferma</button>
+    
+    <button id="btnClose" onclick="closeModal()">Annulla</button> -->
+
+  </div>
+</div>
+
+
+</div>
+
+<!-- </body> -->
